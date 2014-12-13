@@ -1,0 +1,1177 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+/***************************************
+
+				HEADER
+
+***************************************/
+
+#wrapper{
+	position:relative;
+	box-sizing: border-box;
+	overflow:auto;
+}
+
+#header{
+	background: url('../imgs/wallpaper.png');
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 100%;
+	background-size: 100%;
+	border-top: solid 12px rgba(25, 53, 98, 0.7);
+	border-bottom: solid 4px rgba(25, 53, 98, 0.075);
+	box-shadow: inset 0 0 100px	rgba(255, 255, 255, 0.3);
+}
+
+#logo{
+	height: 70%;
+	width: 65%;
+	float:left;
+	background: url('../imgs/logo.png');
+	background-repeat: no-repeat;
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+#logo_img{
+	text-decoration:none;
+	color:white;
+}
+
+#title h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	color: white;
+}
+
+#title h2{
+	margin-top: 40px;
+	margin-bottom: 0px;
+	font-family: 'Libre Baskerville';
+	font-size: 1.6em;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+#title{
+	padding-left: 22.5%;
+}
+
+#wrapper_login{
+	width: 30%;
+	height: 100%;
+	float: left;
+	background: rgba(25, 53, 98, 0.1);
+}
+
+#login{
+	padding-top: 50px;
+	padding-left: 50px;
+	font-family: 'Julius Sans One', sans-serif;
+	text-transform: uppercase;
+	color: white;
+}
+
+#login a{
+	text-decoration: none;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 20px 30px 20px 30px; /*Top|Right|Bottom|Left*/
+}
+
+#login ul{
+	margin-top: 25px;
+	padding: 0;
+}
+
+#login li{
+	list-style: none;
+	height: 50px;
+	background: rgba(255,255,255,0.1);
+	text-align:center;
+	vertical-align:middle;
+	display:table-cell;
+	margin-left: 10px;
+}
+
+#login li:hover{
+	background: rgba(255, 255, 255, 0.3);
+	cursor:
+}
+
+#login a:hover{
+	color: rgba(255, 255, 255, 0.9);
+}
+
+#login li+li{
+	border-left: solid 2px rgba(255, 255, 255, 0.2);
+}
+
+#login li~li{
+	border-left: solid 2px rgba(255, 255, 255, 0.2);
+}
+
+#button{
+	background: rgba(255, 255, 255, 0.1);
+	text-decoration: none;
+
+}
+
+#sidebar_search_poll input[type="button"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+}
+
+#sidebar_search_poll input[type="button"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
+
+#search_poll input[type="text"]{
+	background-color: transparent;
+	border: solid 3px rgba(255, 255, 255, 0.2);
+	width: 237px;
+	height: 35px;
+	color: white;
+	font-family: 'Libre Baskerville';
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+#search_poll input[type="text"]:focus{
+	border: solid 3px rgba(255, 255, 255, 0.5);
+	outline:0;
+}
+
+#search_poll input[type="text"]::-webkit-input-placeholder { font-style: italic; }
+#search_poll input[type="text"]::-moz-placeholder { font-style: italic; }
+#search_poll input[type="text"]::-ms-input-placeholder { font-style: italic; }
+
+#languages{
+	padding-top: 15px;
+	height: 43px;
+	width: 253px;
+}
+
+#languages_item{
+	float:right;
+	height: 100%;
+	margin-left: 20px;
+	opacity: 0.7;
+}
+
+#languages_item:hover{
+	opacity: 1;
+}
+
+#languages_item a{
+	float:right;
+	padding: 0;
+	height: 43px;
+}
+
+#languages_item a:hover{
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+/***************************************
+
+				MAIN
+
+***************************************/
+
+.wrap {
+	  /* force the div to properly contain the floated images: */
+	position:relative;
+	float:left;
+	clear:none;
+	overflow:hidden;
+	margin-right: 5px;
+}
+
+.wrap img {
+	position:relative;
+	z-index:1;
+	min-width: 150px;
+	min-height: 150px;
+	max-width: 150px;
+	max-height: 150px;
+}
+
+
+.wrap .desc {
+	display:block;
+	position:absolute;
+	width:100%;
+	top:0%;
+	left:0;
+	z-index:2;
+	text-align:center;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px 0 10px 0;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 13px;
+	margin: 0;
+	color:white;
+}
+
+#poll{
+	font-family: helvetica;
+	min-height:200px;
+	color:white;
+	font-size:14px;
+	font-family: 'Libre Baskerville';
+	overflow:hidden;
+}
+
+#poll h1{
+	text-align:center;
+	margin-top:0;
+	font-weight: normal;
+}
+
+#poll_info{
+	width:70%;
+	height: 100%;
+	display: block;
+	float:left;
+	color: black;
+	margin-bottom: 50px;
+}
+
+#pagination_faq{
+	height: 50px;
+	width: 100%;
+	margin-top: 25px;
+	margin-left: 60px;
+	color:black;
+}
+
+#pagination{
+	height: 50px;
+	width: 100%;
+	margin-top: 350px;
+	margin-left: 60px;
+	color:black;
+}
+
+#pagination a, #pagination_faq a{
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding: 10px 20px 10px 20px; /*Top|Right|Bottom|Left*/
+}
+
+#pagination a:hover, #pagination_faq a:hover{
+	background-color: rgba(25, 53, 98, 0.2);
+}
+
+#go_back{
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	margin-left: 60px;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding: 10px 20px 10px 20px; /*Top|Right|Bottom|Left*/
+}
+
+#edit_reg{
+	
+}
+
+#edit_reg img{
+	max-height: 150px;
+	max-width: 150px;
+	min-height: 150px;
+	min-width: 150px;
+}
+
+#go_back:hover{
+	background-color: rgba(25, 53, 98, 0.2);
+}
+
+#poll_option{
+	margin-bottom: 25px;
+}
+
+
+#poll_remove{
+	
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	background-color: rgba(245, 36, 36, 0.1);
+	padding: 10px 20px 10px 20px; /*Top|Right|Bottom|Left*/
+	
+}
+
+#poll_remove:hover{
+	background-color: rgba(245, 36, 36, 0.2);
+}
+
+#poll_edit{
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	background-color: rgba(13, 202, 40, 0.1);
+	padding: 10px 20px 10px 20px; /*Top|Right|Bottom|Left*/
+}
+
+#poll_edit:hover{
+	background-color: rgba(13, 202, 40, 0.2);
+}
+
+#poll_options{
+	float:left; 
+	width: 100px; 
+	height: 75px; 
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+#poll_name{
+	font-size: 16px;
+	font-style: italic;
+}
+
+#poll_title{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 60px;
+	padding-top: 2.393em;
+}
+
+#poll_title h2{
+	font-size: 24px;
+}
+
+#poll_most_active{
+	margin-left: 60px;
+	height: 100%;
+	width: 800px;
+}
+
+#poll_latest_polls{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 60px;
+}
+
+#poll_latest_polls h2{
+	margin: 0 0 20px 0;
+	padding: 0;
+	font-size: 24px;
+}
+
+#sidebar_poll{
+	width: 30%;
+	height: 100%;
+	margin-left: 70%;
+	background-color: rgba(229, 237, 232, 0.9);
+	padding-bottom: 1000px;
+    margin-bottom: -1000px;
+}
+
+#sidebar_filters{
+	padding-top:25px;
+	padding-left: 15%;
+	font-family: 'Julius Sans One', sans-serif;
+	color:black;
+}
+
+#sidebar_filters h2{
+	margin: 25px 0 25px 0;
+	padding: 0;
+}
+
+#sidebar_search_poll{
+	height: 30%;
+}
+
+#select{
+	font-family: 'Libre Baskerville';
+	font-size: 12px;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+}
+
+#select_subject{
+	width: 251px;
+	height: 38px;
+	font-family: 'Libre Baskerville';
+	font-size: 16px;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	padding-left: 10px;
+}
+
+#sidebar_view_all{
+	margin-top: 25px;
+}
+
+#sidebar_search_poll a{
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding: 10px 20px 10px 20px; /*Top|Right|Bottom|Left*/
+}
+
+#sidebar_search_poll a:hover{
+	background-color: rgba(25, 53, 98, 0.2);
+}
+
+.ui-widget input {
+	font-family: 'Libre Baskerville';
+	background-color: white;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	width: 235px;
+	height: 30px;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
+.ui-widget input:focus{
+	border: solid 3px rgba(25, 53, 98, 0.5);
+	outline:0;
+}
+
+.ui-autocomplete{
+	font-family: 'Libre Baskerville';
+
+}
+
+.ui-autocomplete li.ui-menu-item{
+	
+}
+
+.ui-autocomplete:hover, 
+.ui-menu-item:hover,
+.ui-menu-item a:hover,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a
+{ 
+	
+}
+
+#info{
+	background: url('../imgs/voting.png') no-repeat;
+	background-size: 100%;
+	height:550px;
+}
+
+#info_list{
+	width:70%;
+	height: 100%;
+	display: block;
+	float:left;
+}
+
+#info_img{
+	float: left;
+}
+
+#info_title{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 60px;
+	padding-top: 15px;
+}
+
+#poll_modal{
+	margin-left: 20px;
+	overflow:hidden;
+}
+
+#poll_modal_title{
+	font-family: 'Julius Sans One', sans-serif;
+}	
+
+
+#poll_modal_title input{
+	border: 0;
+	font-family: 'Julius Sans One';
+	font-size: 14px;
+	width: 250px;
+}
+
+#poll_modal_title input:focus{
+	outline:0;
+}
+
+
+
+#poll_modal_form{
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+}
+
+#poll_modal_div{
+	display:block;
+}
+
+#poll_modal span a{
+	text-decoration: none;
+	color: rgba(13, 66, 151, 0.7);
+}
+
+#poll_modal span a:hover{
+	color: rgba(13, 66, 151, 1);
+	text-decoration:underline;
+}
+
+#poll_modal_edit{
+	margin-left: 20px;
+	overflow:hidden;
+}
+
+#poll_modal_div_edit{
+	display:block;
+}
+
+#poll_modal_div_edit input{
+	border: 0;
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+	width: 250px;
+}
+
+#poll_modal_div_edit input:focus{
+	outline:0;
+}
+
+#lbl_edit{
+	display:block;
+}
+
+#edit_reg input[type="text"], input[type="password"]{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	width: 235px;
+	height: 30px;
+	padding-left: 10px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	font-size: 12px;
+}
+
+#edit_reg input[type="submit"], input[type="button"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+}
+
+#edit_reg input[type="submit"]:hover, input[type="button"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	cursor: pointer;
+}
+
+#lbl_answer{
+	border: solid 2px rgba(25, 53, 98, 0.1);
+	display:inline-block;
+	width: 250px;
+	padding-left: 5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom: 10px;
+}
+
+#lbl_vote{
+	color:red;
+}
+
+#lbl_answer:hover{
+	border: solid 2px rgba(25, 53, 98, 0.3);
+}
+
+#info_subtitle{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 40px;
+}
+
+#info_subtitle h4{
+	margin: 0;
+	padding-top: 10px;
+}
+
+#info_item{
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+#info_text{
+	font-family: 'Libre Baskerville';
+	text-align:justify;
+}
+
+
+#info_sidebar_item{
+	margin-left: 60px;
+	margin-top: 5%;
+}
+
+#info_text_sidebar{
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+	text-align:justify;
+}
+
+#info_text_sidebar p{
+	margin-right: 20px;
+}
+
+#info_text_sidebar a{
+	text-decoration: none;
+	color: rgba(13, 66, 151, 1);
+}
+
+#info_text_sidebar a:hover{
+	color: rgba(10, 71, 167, 1);
+	text-decoration: underline;
+}
+
+#diff_img_dim{
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+#sidebar_info{
+	width: 30%;
+	height: 100%;
+	margin-left: 70%;
+	background-color: rgba(25, 53, 98, 0.1);
+}
+
+/******************************************
+
+			ONLY FOR REGISTER
+
+*******************************************/
+
+#register{
+	min-height: 500px;
+	width: 100%;
+	overflow:hidden;
+}
+
+#register_form{
+	width: 70%;
+	height: 100%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#reg_form{
+	margin-left: 60px;
+	padding-top: 10px;
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+}
+
+#register_form_title{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 60px;
+	padding-top: 10px;
+}
+
+#register_sidebar{
+	width: 30%;
+	margin-left: 70%;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding-top: 10px;
+	padding-bottom: 1000px;
+    margin-bottom: -1000px;
+}
+
+#register_form input[type="text"], input[type="password"]{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	width: 235px;
+	height: 30px;
+	padding-left: 10px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	font-size: 12px;
+}
+
+#register_form input[type="submit"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+}
+
+#register_form span{
+	color:red;
+}
+
+#register_form input[type="submit"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
+#register_sidebar_title{
+	font-family: 'Julius Sans One', sans-serif;
+	margin-left: 60px;
+	padding-top: 10px;
+}
+
+#register_sidebar_rules{
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+}
+
+#register a{
+	text-decoration: none;
+	color: rgba(13, 66, 151, 1);
+}
+
+#register a:hover{
+	color: rgba(10, 71, 167, 1);
+	text-decoration: underline;
+}
+
+/******************************************
+
+			ONLY FOR LOGIN
+
+******************************************/
+
+#login_page{
+	height: 350px;
+	width: 100%;
+}
+
+#login_form{
+	width: 70%;
+	height: 100%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#login_sidebar{
+	width: 30%;
+	height: 100%;
+	margin-left: 70%;
+	background-color: rgba(25, 53, 98, 0.1);
+}
+
+#login_form input[type="text"], input[type="password"]{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	width: 235px;
+	height: 30px;
+	padding-left: 10px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	font-size: 12px;
+}
+
+#login_form input[type="submit"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+	color: black;
+}
+
+#login_form input[type="submit"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
+#lbl_login{
+	color:red;
+}
+
+/******************************************
+
+			ONLY FOR ABOUT US
+
+******************************************/
+
+#about_us{
+	min-height: 500px;
+	overflow:hidden;
+	width: 100%;
+}
+
+#about_info{
+	width: 70%;
+	height: 100%;
+	float: left;
+	margin-left: 60px;
+	margin-bottom: 50px;
+}
+
+#about_info textarea{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	display:block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	padding-left: 10px;
+}
+
+#about_info input[type="submit"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+}
+
+#about_info input[type="submit"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	cursor:pointer;
+}
+
+#about_info h3{
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+#about_sidebar{
+	width: 30%;
+	height: 100%;
+	margin-left: 70%;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+
+#about_us a{
+	text-decoration: none;
+	color: rgba(13, 66, 151, 1);
+}
+
+#about_us a:hover{
+	color: rgba(10, 71, 167, 1);
+	text-decoration: underline;
+}
+
+#about_us_sidebar_text{
+	font-family: 'Libre Baskerville';
+	font-size: 14px;
+	text-align: justify;
+	margin-top: 40px;
+}
+
+#edit_reg textarea{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	display:block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	padding-left: 10px;
+}
+
+#faqs{
+	min-height:350px;
+	color:white;
+	font-size:14px;
+	font-family: 'Libre Baskerville';
+	overflow:hidden;
+}
+
+#users{
+	min-height:350px;
+	color:white;
+	font-size:14px;
+	font-family: 'Libre Baskerville';
+	overflow:hidden;
+}
+
+/*****************************************
+
+	ONLY FOR SEND US YOUR OPINION
+
+*****************************************/
+
+#contact{
+	min-height: 500px;
+	overflow:hidden;
+	width: 100%;
+}
+
+#contact_form{
+	width: 70%;
+	height: 70%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#contact_form input[type="text"], input[type="password"]{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	width: 235px;
+	height: 30px;
+	padding-left: 10px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	font-size: 12px;
+}
+
+#contact_form input[type="submit"]{
+	background: rgba(25, 53, 98, 0.1);
+	border: none;
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	display: block;
+}
+
+#contact_form textarea{
+	background-color: transparent;
+	border: solid 3px rgba(25, 53, 98, 0.3);
+	display:block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Libre Baskerville';
+	padding-left: 10px;
+}
+
+#contact_form span{
+	color:red;
+}
+
+#contact_form input[type="submit"]:hover{
+	background: rgba(25, 53, 98, 0.2);
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+	cursor: pointer;
+}
+
+#contact_sidebar{
+	width: 30%;
+	margin-left: 70%;
+	background-color: rgba(25, 53, 98, 0.1);
+	padding-top: 10px;
+	padding-bottom: 1000px;
+    margin-bottom: -1000px;
+}
+
+/******************************************
+
+			ONLY FOR ERRORS
+
+*******************************************/
+
+#error{
+	height:400px;
+	width:100%;
+}
+
+#error_list{
+	width:70%;
+	height: 100%;
+	display: block;
+	float:left;
+}
+
+#error_sidebar{
+	width: 30%;
+	height: 100%;
+	margin-left: 70%;
+	background-color: rgba(229, 237, 232, 0.5);
+}
+
+/******************************************
+
+				FOOTER
+
+*******************************************/
+
+
+
+
+#footer{
+	background-color: #4A6491;
+	background-repeat: repeat;
+	height: 100px;
+	padding-top: 50px;
+	text-align: center;
+	/*padding-top:50px;*/
+}
+
+
+#wrapper_footer{
+	width: 100%;
+	height: 100px;
+}
+
+#footer a{
+	padding-left: 100px;
+	padding-bottom: 83px;
+}
+
+#footer a:hover{
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+#sn_facebook{
+	float:left;
+	width:100px;
+	height: 100px;
+	background: url('../imgs/facebook.png') no-repeat;
+	margin-left: 20%;
+	opacity: 0.5;
+}
+
+#sn_twitter{
+	float:left;
+	width:100px;
+	height: 100px;
+	background: url('../imgs/twitter.png') no-repeat;
+	margin-left: 20%;
+	opacity: 0.5;
+}
+
+#sn_linkedin{
+	float:left;
+	width:100px;
+	height: 100px;
+	background: url('../imgs/linkedin.png') no-repeat;
+	margin-left: 20%;
+	opacity: 0.5;
+}
+
+#sn_facebook:hover, #sn_twitter:hover, #sn_linkedin:hover{
+	opacity: 1;
+}
+
+#copyrights{
+	font-family: 'Libre Baskerville';
+	font-style: italic;
+	font-size: 1em;
+	opacity: 0.7;
+	color:white;
+	margin-top: 25px;
+}
+
+#copyrights a {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	text-decoration: none;
+	padding-bottom: 20px;
+	color: white;
+	opacity: 0.7;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#copyrights a:hover{
+	background-color: rgba(255, 255, 255, 0.3);
+	opacity: 1;
+}
+
+@font-face{
+	font-family: Lucida;
+	src: url(../fonts/lucida.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url(http://fonts.gstatic.com/s/juliussansone/v4/iU65JP9acQHPDLkdalCF7qW9WqC4OJJkfgA_jCJuPCQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url(http://fonts.gstatic.com/s/juliussansone/v4/iU65JP9acQHPDLkdalCF7qbE79T7ABI2Ygfbza8Crac.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(http://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsKwHlCYWexZJCPRz1QQ0uKVU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(http://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsK7kvRI2YMbVn3Zp4DO7W6yU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(http://fonts.gstatic.com/s/librebaskerville/v4/QHIOz1iKF3bIEzRdDFaf5aL70jAX4bHURgRIcBKzZwI.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(http://fonts.gstatic.com/s/librebaskerville/v4/QHIOz1iKF3bIEzRdDFaf5ZVqUHa6dem-j7qKgmixbfQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+	font-family: 'verdemoderna';
+	src:url('verdemoderna.eot');
+	src:url('verdemoderna.eot?#iefix') format('embedded-opentype'),
+		url('verdemoderna.woff') format('woff'),
+		url('verdemoderna.ttf') format('truetype'),
+		url('verdemoderna.svg#verdemoderna') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}                                                                                                          

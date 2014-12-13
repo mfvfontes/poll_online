@@ -1,0 +1,136 @@
+DROP TABLE IF EXISTS Type_User;
+DROP TABLE IF EXISTS Subject;
+DROP TABLE IF EXISTS Images;
+DROP TABLE IF EXISTS About_Us;
+DROP TABLE IF EXISTS About_Us_Sidebar;
+DROP TABLE IF EXISTS Opinions;
+DROP TABLE IF EXISTS Opinions_Sidebar;
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Poll;
+DROP TABLE IF EXISTS Answers;
+DROP TABLE IF EXISTS Votes;
+
+CREATE TABLE Type_User(
+	id_type_user INTEGER PRIMARY KEY AUTOINCREMENT,
+	description VARCHAR(20)
+);
+
+CREATE TABLE Subject(
+	id_subject INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR(30)
+);
+
+CREATE TABLE Images(
+	id_image INTEGER PRIMARY KEY AUTOINCREMENT,
+	url TEXT
+);
+
+CREATE TABLE About_Us(
+	id_about_us INTEGER PRIMARY KEY AUTOINCREMENT,
+	motivation TEXT,
+	objective TEXT,
+	help_us TEXT
+);
+
+CREATE TABLE About_Us_Sidebar(
+	id_about_us_sidebar INTEGER PRIMARY KEY AUTOINCREMENT,
+	id_about_us INTEGER,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_about_us) REFERENCES About_Us(id_about_us) ON DELETE SET NULL ON UPDATE SET NULL,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Opinions(
+	id_opinion INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR(50),
+	email VARCHAR(50),
+	comments TEXT
+);
+
+CREATE TABLE Opinions_Sidebar(
+	id_opinion_sidebar INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Login_Sidebar(
+	id_login_sidebar INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Register_Sidebar(
+	id_register_sidebar INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Info_List(
+	id_info_list INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Info_Sidebar(
+	id_info_sidebar INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(25),
+	description VARCHAR(75),
+	id_image INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Faqs(
+	id_faq INTEGER PRIMARY KEY AUTOINCREMENT,
+	question VARCHAR(100),
+	answer TEXT
+);
+
+CREATE TABLE User(
+	id_user INTEGER PRIMARY KEY AUTOINCREMENT,
+	username VARCHAR(50),
+	password VARCHAR(100),
+	email VARCHAR(50),
+	phone INTEGER(9),
+	id_type_user INTEGER,
+	FOREIGN KEY (id_type_user) REFERENCES Type_User(id_type_user) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Poll(
+	id_poll INTEGER PRIMARY KEY AUTOINCREMENT,
+	title VARCHAR(50),
+	question VARCHAR(50),
+	public BOOLEAN,
+	id_image INTEGER,
+	id_user INTEGER,
+	FOREIGN KEY (id_image) REFERENCES Images(id_image) ON DELETE SET NULL ON UPDATE SET NULL,
+	FOREIGN KEY (id_user) REFERENCES User(id_user) ON DELETE SET NULL ON UPDATE SET NULL
+	
+);
+
+CREATE TABLE Answers(
+	id_answer INTEGER PRIMARY KEY AUTOINCREMENT,
+	description VARCHAR(100),
+	id_poll INTEGER,
+	FOREIGN KEY (id_poll) REFERENCES Poll(id_poll) ON DELETE SET NULL ON UPDATE SET NULL
+);
+
+CREATE TABLE Votes(
+	id_poll INTEGER,
+	id_user INTEGER,
+	id_answer INTEGER,
+	PRIMARY KEY(id_poll, id_user, id_answer),
+	FOREIGN KEY (id_poll) REFERENCES Poll(id_poll) ON DELETE SET NULL ON UPDATE SET NULL,
+	FOREIGN KEY (id_user) REFERENCES User(id_user) ON DELETE SET NULL ON UPDATE SET NULL,
+	FOREIGN KEY (id_answer) REFERENCES Answers(id_answer) ON DELETE SET NULL ON UPDATE SET NULL
+);
+

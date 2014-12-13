@@ -1,0 +1,89 @@
+
+.button a {
+	color: #ED5E2F;
+}
+
+.button a:hover {
+	text-decoration: none;
+}
+
+.buttons {
+	width: 100px;
+}
+
+.buttons a{
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	width: 100px;
+	height:100px;
+	display:block;
+	background-color: rgba(25, 53, 98, 0.1);
+}
+
+/* Custom styles for popin & close button */
+.custom {
+	color: #555;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font: 14px/22px 'Open Sans', Arial, sans-serif;
+}
+
+.custom p {
+	padding: 10px 20px;
+	margin: 30px 0 0;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.save, .twitter, .facebook {
+	float: right;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	padding: 8px 18px;
+	text-decoration: none;
+	margin-right: 5px;
+	-webkit-transition: background 0.3s ease;
+	-moz-transition: background 0.3s ease;
+	-ms-transition: background 0.3s ease;
+	-o-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+	font-family: 'Libre Baskerville';
+	cursor: pointer;
+	border: 0;
+}
+
+.save {
+	background: rgba(25, 194, 37, 0.5);
+}
+
+.save:hover {
+	background: rgba(25, 194, 37, 0.8);
+}
+
+.twitter {
+	background: rgba(71, 186, 255, 0.8);
+}
+
+.twitter:hover {
+	background: rgba(71, 186, 255, 1);
+}
+
+.dribble {
+	background: rgba(241, 118, 122, 0.8);
+}
+
+.dribble:hover {
+	background: rgba(241, 118, 122, 1);
+}	
+
+.facebook {
+	background: rgba(25, 53, 98, 0.5);
+}
+
+.facebook:hover {
+	background: rgba(25, 53, 98, 0.8);
+}
